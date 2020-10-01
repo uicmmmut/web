@@ -1,0 +1,453 @@
+body{
+	background-size: 100%;
+	display: inline-flex;
+	
+	width: 100%;
+	top:0;left: 0;
+	
+	overflow-x: hidden;
+	
+	background: #08102b;
+	
+	
+}
+
+@keyframes body_bg{
+	0%{
+		filter: brightness(100%);
+	}
+	25%{
+		filter: brightness(150%);
+	}
+	50%{
+		filter: brightness(200%);
+	}
+	75%{
+		filter: brightness(250%);
+	}
+}
+
+.landing{
+	width: 100%;
+	height: 100vh;
+	left: -8px;
+	right: 0px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	top: -10px;
+	position: absolute;
+	display: inline-flex;
+	overflow-y: hidden;
+	filter: brightness(100%);
+	background:url(color5.jpg);
+	margin-top: 0px;
+	transition-delay:  2s;
+	z-index: -1;
+	animation: landing-anime 30s linear infinite;
+	animation: body_bg 5s linear infinite;
+}
+
+
+@keyframes landing-anime{
+	0%{
+		background-position: 100px 0;
+
+
+	}
+	100%{
+		background-position: 100px 2000px;
+	}
+}
+
+.box
+{
+	background:#060c21;
+	height: 80%;
+	width: 80%;
+	position: relative;
+	top: 0px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 0.5s;
+
+
+}
+
+.box-img{
+	width: 40%;
+	position: relative;
+	justify-content: center;
+	vertical-align: center;
+
+	mix-blend-mode: difference;
+	animation: img_animate 2s linear;
+
+
+
+}
+
+@keyframes img_animate{
+	0%{
+		
+		/*transform: translateY(-100px);
+		transform: translateX(300px);*/
+		height: 1500px;
+		transform: rotate(-90deg);
+		width: 20%;
+	}
+	25%{
+		
+		transform: rotate(-70deg);
+		
+
+	}
+	50%{
+		
+		transform: rotate(-50deg);
+	}
+	75%{
+		
+		transform: rotate(-30deg);
+	}
+
+}
+
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.box:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	z-index: -1;
+	
+}
+
+.box:after{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	z-index: -2; 
+	
+}
+.box:before,
+.box:after{
+	background: linear-gradient(135deg,#1ad1ff,#060c21,#060c21,#060c21,#1aff1a);
+	filter: blur(10px);
+	animation: box_anime 12s linear infinite;
+
+}
+
+
+
+.neon{
+	position: relative;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	
+}
+
+.neon2{
+	position: relative;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	
+}
+
+.neon .uic{
+	font-family: 'Fredericka the Great';
+
+	top: 10px;
+	position: relative;
+	font-size: 50px;
+	text-transform: uppercase;
+	color:rgba(225,225,225,.1);
+	transition: 3s;	
+	font-weight: bold;
+	background: url(color1.jpg);
+	background-repeat: repeat;
+	-webkit-background-clip:text;
+	animation: uic-anime 10s linear infinite;
+	
+}
+
+
+
+.neon .team{
+	font-family: 'Fredericka the Great';
+
+	top: 10px;
+	position: relative;
+	font-size: 100px;
+	text-transform: uppercase;
+	color:rgba(225,225,225,.1);
+	transition: 3s;	
+	font-weight: bold;
+	background: url(color1.jpg);
+	background-repeat: repeat;
+	-webkit-background-clip:text;
+	animation: uic-anime 10s linear infinite;
+	
+}
+
+
+
+
+	
+@keyframes uic-anime{
+	0%{
+		background-position:  left 0px top 50px; 
+	}
+	100%{
+		background-position:  left 200px top 50px; 
+	}
+	
+}
+
+
+.neon2 .mmm{
+	top:10px;
+	font-family:'Times New Roman';
+	text-transform: uppercase;
+	position: relative;
+	color:white;
+	font-weight:lighter; 
+	font-size:  25px;
+	transition: 4s;
+	background: url(color.jpg);
+	background-repeat: repeat;
+	-webkit-background-clip:text;
+	animation: uic-anime 10s linear infinite;
+
+	
+
+}
+
+.navbar{
+	position: fixed;
+	top: -8px;
+	left: -8px;
+	width: 100%;
+	right: 0px;
+	height: 40px;
+	padding: 0px;
+	z-index: 4;
+	background: #08102b;
+}
+
+.navbar .links{
+	top: -8px;
+	width: 70%;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+	color:white;
+
+}
+
+.navbar .links a{
+	padding: 1em;
+	display: block;
+}
+
+
+@media screen and (max-width: 768px){
+	.neon .uic{
+		font-size: 20px;
+	}
+
+	
+	.neon .team{
+		margin-top: 100px;
+		font-size: 40px;
+	}
+
+	.box-img{
+		margin-top:100px;
+
+	}
+
+	.neon2 .mmm{
+		font-size:12px;
+	}
+}
+
+
+
+@keyframes box_anime{
+	0%{
+		background: linear-gradient(135deg,#1ad1ff,#060c21,#060c21,#060c21,#1aff1a);
+	
+	}
+	25%{
+		background: linear-gradient(270deg,#1ad1ff,#060c21,#060c21,#060c21,#1aff1a);
+	
+	}
+	50%{
+		background: linear-gradient(45deg,#1ad1ff,#060c21,#060c21,#060c21,#1aff1a);
+	
+	}
+	75%{
+		background: linear-gradient(360deg,#1ad1ff,#060c21,#060c21,#060c21,#1aff1a);
+	
+	}
+}
+
+.content{
+	position: absolute;
+	top: 100vh;
+	min-height: 500px;
+	width: 100%;
+	left: 10px;
+	
+	right: 0px;
+	padding: 0px;
+
+}
+
+
+
+
+
+.card{
+	height: 400px;
+	width: 300px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	background: url(color3.jpg);
+		animation: uic-anime 10s linear infinite;
+
+	
+	border-style: dashed;
+	border :2px;
+	border-color: white;
+	float: left;
+	margin-left: 80px;
+	margin-top: 50px;
+	
+	}
+
+
+
+.card:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	z-index: -1;
+	
+}
+
+.card:after{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	z-index: -2; 
+	
+}
+.card:before,
+.card:after{
+	background: linear-gradient(270deg,#238844,#040c21,#060c21,#060c21,#1faf1a);
+	filter: blur(5px);
+	
+}
+
+.card_top{
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	width: 100%;
+	
+}
+
+.card_top_img{
+
+	position: relative;
+	height: 10%;
+	border-radius: 50%;
+}
+	.card_bottom{
+		position: absolute;
+		background: #2047aa;
+		height: 90%;
+		width: 100%;
+		bottom: 0px;
+		top:10%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		z-index: 1;
+		background: url(color.jpg);
+		
+	
+		clip-path: polygon(0% 60%, 100% 30%, 100% 100%, 0 100%);
+
+	}
+
+.card_bottom_content{
+	top:55%;
+	position: absolute;
+	
+	height: 50%;
+	width: 100%;
+}
+.pic{
+	position: absolute;
+	height: 30%;
+	width: 40%;
+	z-index: 10;
+	left: 30%;
+	top: 35%;
+	z-index: 1000;
+	border-color: white;
+}
+
+.img_pic{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	border-color: white;
+	border:2px;
+	border-radius: 50%;
+}
